@@ -1,0 +1,17 @@
+CC=g++
+CFLAGS= -c -Wall
+LDFLAGS= -shared
+SOURCES=sample.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+TARGET=libsample.so
+
+all: $(SOURCES) $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+#$@ insert .o-files
+#$< insert .cpp-files
