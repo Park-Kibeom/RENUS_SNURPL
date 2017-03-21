@@ -157,6 +157,6 @@ DO K=1,NZ
 ENDDO
 
 Atom0(:,:,:) = Atomn(:,:,:)
-Burn0(:,:) = Burnn(:,:)
+If(deltyp.eq.1) Burn0(:,:) = Burnn(:,:)
 
 END SUBROUTINE
