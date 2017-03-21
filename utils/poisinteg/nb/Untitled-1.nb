@@ -1,0 +1,125 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3226,        115]
+NotebookOptionsPosition[      2800,         96]
+NotebookOutlinePosition[      3183,        112]
+CellTagsIndexPosition[      3140,        109]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", "1."}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", "1."}], ";"}]}], "Input",
+ CellChangeTimes->{{3.672112703224351*^9, 3.6721127069385633`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"slv", "=", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"a", 
+        RowBox[{
+         SubscriptBox["\[PartialD]", "t"], 
+         RowBox[{"u", "[", 
+          RowBox[{"x", ",", "t"}], "]"}]}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[PartialD]", 
+          RowBox[{"x", ",", "x"}]], 
+         RowBox[{"u", "[", 
+          RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+        RowBox[{"b", " ", 
+         RowBox[{"u", "[", 
+          RowBox[{"x", ",", "t"}], "]"}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"u", "[", 
+        RowBox[{"x", ",", "0"}], "]"}], "\[Equal]", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"x", " ", "\[Pi]"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"u", "[", 
+        RowBox[{"0", ",", "t"}], "]"}], "\[Equal]", "0"}], ",", 
+      RowBox[{
+       RowBox[{"u", "[", 
+        RowBox[{"1", ",", "t"}], "]"}], "\[Equal]", "0"}]}], "}"}], ",", 
+    RowBox[{"{", "u", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6721125651924562`*^9, 3.6721127294938536`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"u", "\[Rule]", 
+    TagBox[
+     RowBox[{"InterpolatingFunction", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "1.`"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "10.`"}], "}"}]}], "}"}], ",", "\<\"<>\"\>"}], 
+      "]"}],
+     False,
+     Editable->False]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.672112698497081*^9, 3.672112731241954*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"flux", "=", 
+   RowBox[{"(", 
+    RowBox[{"u", "/.", 
+     RowBox[{"slv", "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6721127362602406`*^9, 3.672112760658636*^9}}]
+},
+WindowSize->{1072, 817},
+WindowMargins->{{293, Automatic}, {25, Automatic}},
+Magnification->1.5000001192092896`,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 207, 5, 75, "Input"],
+Cell[CellGroupData[{
+Cell[789, 29, 1243, 37, 75, "Input"],
+Cell[2035, 68, 498, 16, 44, "Output"]
+}, Open  ]],
+Cell[2548, 87, 248, 7, 45, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

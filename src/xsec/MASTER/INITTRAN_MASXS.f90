@@ -1,0 +1,24 @@
+  SUBROUTINE INITTRAN_MASXS(REIGV)
+  
+    USE MASTERXSL
+    
+    REAL,INTENT(IN) :: REIGV
+    
+    ORIGINXS(:,NUFS,:,:)=ORIGINXS(:,NUFS,:,:)*REIGV
+    PPMDXS(:,NUFS,:,:,:)=PPMDXS(:,NUFS,:,:,:)*REIGV
+    TFDXS(:,NUFS,:,:,:)=TFDXS(:,NUFS,:,:,:)*REIGV
+    DMDXS(:,NUFS,:,:,:)=DMDXS(:,NUFS,:,:,:)*REIGV
+    
+    
+    OCRDXS(:,NUFS,:,:)=OCRDXS(:,NUFS,:,:)*REIGV
+    PPMDXS_H(:,NUFS,:,:)=PPMDXS_H(:,NUFS,:,:)*REIGV
+    DMDXS_H(:,NUFS,:,:,:)=DMDXS_H(:,NUFS,:,:,:)*REIGV
+    
+    MACORIGIN(:,NUFS,:)=MACORIGIN(:,NUFS,:)*REIGV
+    MACDPPM(:,NUFS,:,:)=MACDPPM(:,NUFS,:,:)*REIGV
+    MACDTF(:,NUFS,:,:)=MACDTF(:,NUFS,:,:)*REIGV
+    MACDDM(:,NUFS,:,:)=MACDDM(:,NUFS,:,:)*REIGV
+    
+    
+  
+  END SUBROUTINE
